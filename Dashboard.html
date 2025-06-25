@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost/Finals_Project/dashboard.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background-color: #2b2b3c;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2, h3 {
+            color: #ffffff;
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .btn-success { background: #6fcf97; color: #1e1e2f; }
+        .btn-success:hover { background: #5cbf88; }
+
+        .btn-danger { background: #e57373; color: #1e1e2f; }
+        .btn-danger:hover { background: #d35c5c; }
+
+        .btn-warning { background: #f2c94c; color: #1e1e2f; }
+        .btn-warning:hover { background: #e6b62e; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        th {
+            background-color: #383850;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #252536;
+        }
+
+        tr:hover {
+            background-color: #303047;
+        }
+
+        .pagination {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .pagination li {
+            display: inline;
+        }
+
+        .pagination a {
+            color: #f0f0f0;
+            background-color: #444;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .pagination a:hover {
+            background-color: #666;
+        }
+
+        .pagination .active a {
+            background-color: #6fcf97;
+            color: #1e1e2f;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, measuringstick!</h2>
+        <p>
+            <a href="http://localhost/Finals_Project/logout.php" class="btn btn-danger">Logout</a>
+            <a href="http://localhost/Finals_Project/add.php" class="btn btn-success">Add Student</a>
+        </p>
+
+        <h3>Student List</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student ID</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                    <td>2</td>
+                    <td>S2025-0154</td>
+                    <td>Carrie Garrison</td>
+                    <td>25</td>
+                    <td>carrie.garrison@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=2" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=2" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>3</td>
+                    <td>S2025-0155</td>
+                    <td>Jesse Kane</td>
+                    <td>18</td>
+                    <td>jesse.kane@university.edu</td>
+                    <td>Male</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=3" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=3" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>4</td>
+                    <td>S2025-0156</td>
+                    <td>Mrs. Cheryl Soto</td>
+                    <td>25</td>
+                    <td>mrs..cheryl.soto@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=4" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=4" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>5</td>
+                    <td>S2025-0157</td>
+                    <td>Michelle Barnes</td>
+                    <td>23</td>
+                    <td>michelle.barnes@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=5" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=5" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>6</td>
+                    <td>S2025-0158</td>
+                    <td>Janet Ward</td>
+                    <td>21</td>
+                    <td>janet.ward@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=6" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=6" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>7</td>
+                    <td>S2025-0159</td>
+                    <td>Sherry Robinson</td>
+                    <td>22</td>
+                    <td>sherry.robinson@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=7" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=7" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>8</td>
+                    <td>S2025-0160</td>
+                    <td>Amy Gallagher</td>
+                    <td>18</td>
+                    <td>amy.gallagher@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=8" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=8" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>9</td>
+                    <td>S2025-0161</td>
+                    <td>Jodi Zhang</td>
+                    <td>19</td>
+                    <td>jodi.zhang@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=9" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=9" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>10</td>
+                    <td>S2025-0162</td>
+                    <td>Angela Chapman</td>
+                    <td>18</td>
+                    <td>angela.chapman@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=10" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=10" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                            <tr>
+                    <td>12</td>
+                    <td>S2025-0164</td>
+                    <td>Stephanie Lambert</td>
+                    <td>23</td>
+                    <td>stephanie.lambert@university.edu</td>
+                    <td>Female</td>
+                    <td>BS Electronics Engineering</td>
+                    <td>
+                        <a href="http://localhost/Finals_Project/edit.php?id=12" class="btn btn-warning">Edit</a>
+                        <a href="http://localhost/Finals_Project/delete.php?id=12" class="btn btn-danger" onclick="return confirm(&#39;Are you sure?&#39;)">Delete</a>
+                    </td>
+                </tr>
+                        </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <ul class="pagination">
+            
+                            <li class="active">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=1">1</a>
+                </li>
+                            <li class="">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=2">2</a>
+                </li>
+                            <li class="">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=3">3</a>
+                </li>
+                            <li class="">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=4">4</a>
+                </li>
+                            <li class="">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=5">5</a>
+                </li>
+                            <li class="">
+                    <a href="http://localhost/Finals_Project/dashboard.php?page=6">6</a>
+                </li>
+            
+                            <li><a href="http://localhost/Finals_Project/dashboard.php?page=2">Next »</a></li>
+                    </ul>
+    </div>
+
+
+</body></html>

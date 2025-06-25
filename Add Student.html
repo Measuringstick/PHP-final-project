@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://localhost/Finals_Project/add.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Add Student</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            background: #2b2b3c;
+            border-radius: 15px;
+            padding: 30px;
+            padding-right: 50px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #81d4fa;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            background: #1c1c2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            color: #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #6fcf97;
+            background-color: #29293d;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background: #6fcf97;
+            color: #1e1e2f;
+            padding: 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #5cbf88;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Add Student</h2>
+    <a href="http://localhost/Finals_Project/dashboard.php">← Back to Dashboard</a>
+    <form action="http://localhost/Finals_Project/addAction.php" method="post">
+        <label>Student ID</label>
+        <input type="text" name="sid">
+
+        <label>Full Name</label>
+        <input type="text" name="name">
+
+        <label>Age</label>
+        <input type="number" name="age">
+
+        <label>Email</label>
+        <input type="email" name="email">
+
+        <label>Gender</label>
+        <select name="gender">
+            <option value="">-- Select --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label>Course</label>
+        <input type="text" name="course">
+
+        <button type="submit" name="submit">Add Student</button>
+    </form>
+</div>
+
+
+</body></html>
